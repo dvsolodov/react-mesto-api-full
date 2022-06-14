@@ -17,7 +17,7 @@ const { login, createUser } = require('./controllers/users');
 const auth = require('./middlewares/auth');
 
 const { PORT = 3000 } = process.env;
-const { urlPattern } = require('./utils/constants');
+const { urlPattern, allowedCors } = require('./utils/constants');
 
 mongoose.connect('mongodb://localhost:27017/mestodb', {
   useNewUrlParser: true,
@@ -27,6 +27,26 @@ mongoose.connect('mongodb://localhost:27017/mestodb', {
 
 app.use(bodyParser.json());
 app.use(cookieParser());
+
+app.use((req, res, next) => {
+  const { origin } = req.headers;
+  const requestHeaders = req.headers['access-control-request-headers'];
+  const { method } = req;
+  const DEFAULT_ALLOWED_METHODS = "GET,HEAD,PUT,PATCH,POST,DELETE"; 
+
+  if (allowedCors.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+  }
+
+  if (method === 'OPTIONS') {
+    res.header('Access-Control-Allow-Methods', DEFAULT_ALLOWED_METHODS);
+    res.header('Access-Control-Allow-Headers', requestHeaders);
+
+    return res.end();
+  } 
+
+  next();
+});
 
 app.post('/signin', celebrate({
   body: Joi.object().keys({
