@@ -10,31 +10,31 @@ class Auth {
   }
 
   getUserData() {
-    return fetch(`${this._baseUrl}${this._paramCheckToken}`, {headers: this._headers})
+    return fetch(`${this._baseUrl}${this._paramCheckToken}`, { headers: this._headers })
       .then((response) => this._checkResponse(response));
   }
 
   register(email, password) {
     return fetch(`${this._baseUrl}${this._paramRegister}`, {
-        method: "POST",
-        headers: this._headers,
-        body: JSON.stringify({
-          "password": password,
-          "email": email
-        })
+      method: "POST",
+      headers: this._headers,
+      body: JSON.stringify({
+        "password": password,
+        "email": email
       })
+    })
       .then((response) => this._checkResponse(response));
   }
 
   login(email, password) {
     return fetch(`${this._baseUrl}${this._paramLogin}`, {
-        method: "POST",
-        headers: this._headers,
-        body: JSON.stringify({
-          "password": password,
-          "email": email
-        })
+      method: "POST",
+      headers: this._headers,
+      body: JSON.stringify({
+        "password": password,
+        "email": email
       })
+    })
       .then((response) => this._checkResponse(response));
   }
 
@@ -45,5 +45,5 @@ class Auth {
 
 const auth = new Auth();
 
-export {auth};
+export { auth };
 

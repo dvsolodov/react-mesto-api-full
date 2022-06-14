@@ -9,6 +9,7 @@ const { celebrate, Joi } = require('celebrate');
 
 const { errors } = require('celebrate');
 const NotFoundError = require('./errors/not-found-err');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const userRouter = require('./routes/users');
 const cardRouter = require('./routes/cards');
@@ -48,6 +49,8 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(requestLogger);
+
 app.post('/signin', celebrate({
   body: Joi.object().keys({
     email: Joi.string().required().email(),
@@ -71,6 +74,8 @@ app.use('/cards', cardRouter);
 app.use('/', () => {
   throw new NotFoundError('Нет данных');
 });
+
+app.use(errorLogger);
 
 app.use(errors());
 
