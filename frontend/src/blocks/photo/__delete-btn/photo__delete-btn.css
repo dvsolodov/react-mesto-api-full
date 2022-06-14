@@ -1,0 +1,19 @@
+.photo__delete-btn {
+  width: 18px;
+  height: 19px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-image: url(../../../images/photo-trash.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.photo__delete-btn:hover {
+  opacity: 0.6;
+  transition: opacity .3s;
+}

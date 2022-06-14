@@ -1,0 +1,8 @@
+.auth-form__text_link {
+  text-decoration: none;
+}
+
+.auth-form__text_link:hover {
+  color: rgba(255, 255, 255, .6);
+  transition: background-color .3s;
+}

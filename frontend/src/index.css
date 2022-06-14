@@ -1,0 +1,102 @@
+/* begin:common styles */
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/inter.css);
+@import url(./blocks/page/page.css);
+/* end:common styles */
+
+/* begin:header */
+@import url(./blocks/header/header.css);
+@import url(./blocks/header/__logo/header__logo.css);
+/* end:header */
+
+/* begin:navbar */
+@import url(./blocks/navbar/navbar.css);
+@import url(./blocks/navbar/__nav/navbar__nav.css);
+@import url(./blocks/navbar/__link/navbar__link.css);
+@import url(./blocks/navbar/__link/_log-out/navbar__link_log-out.css);
+@import url(./blocks/navbar/__email/navbar__email.css);
+/* end:navbar */
+
+/* begin:content */
+@import url(./blocks/content/content.css);
+/* end:content */
+
+/* begin:profile */
+@import url(./blocks/profile/profile.css);
+@import url(./blocks/profile/__avatar-wrap/profile__avatar-wrap.css);
+@import url(./blocks/profile/__avatar-overlay/profile__avatar-overlay.css);
+@import url(./blocks/profile/__avatar/profile__avatar.css);
+@import url(./blocks/profile/__add-btn/profile__add-btn.css);
+/* end:profile */
+
+/* begin:popup */
+@import url(./blocks/popup/popup.css);
+@import url(./blocks/popup/_opened/popup_opened.css);
+@import url(./blocks/popup/_opacity-darker/popup_opacity-darker.css);
+@import url(./blocks/popup/__container/popup__container.css);
+@import url(./blocks/popup/__close-btn/popup__close-btn.css);
+/* end:popup */
+
+/* begin:info-tooltip*/
+@import url(./blocks/info-tooltip/info-tooltip.css);
+@import url(./blocks/info-tooltip/__message/info-tooltip__message.css);
+@import url(./blocks/info-tooltip/__icon/info-tooltip__icon.css);
+/* end:info-tooltip */
+
+/* begin:profile-info */
+@import url(./blocks/profile-info/profile-info.css);
+@import url(./blocks/profile-info/__name/profile-info__name.css);
+@import url(./blocks/profile-info/__about/profile-info__about.css);
+@import url(./blocks/profile-info/__edit-btn/profile-info__edit-btn.css);
+/* end:profile-info */
+
+/* begin:photos */
+@import url(./blocks/photos/photos.css);
+/* end:photos */
+
+/* begin: auth-form */
+@import url(./blocks/auth-form-container/auth-form-container.css);
+@import url(./blocks/auth-form/auth-form.css);
+@import url(./blocks/auth-form/__title/auth-form__title.css);
+@import url(./blocks/auth-form/__input/auth-form__input.css);
+@import url(./blocks/auth-form/__submit-btn/auth-form__submit-btn.css);
+@import url(./blocks/auth-form/__text/auth-form__text.css);
+@import url(./blocks/auth-form/__text/_link/auth-form__text_link.css);
+/* end: auth-form */
+
+/* begin:photo */
+@import url(./blocks/photo/photo.css);
+@import url(./blocks/photo/__img-wrapper/photo__img-wrapper.css);
+@import url(./blocks/photo/__img/photo__img.css);
+@import url(./blocks/photo/__caption/photo__caption.css);
+@import url(./blocks/photo/__title/photo__title.css);
+@import url(./blocks/photo/__likes-block/photo__likes-block.css);
+@import url(./blocks/photo/__like-btn/photo__like-btn.css);
+@import url(./blocks/photo/__like-btn/_active/photo__like-btn_active.css);
+@import url(./blocks/photo/__likes-counter/photo__likes-counter.css);
+@import url(./blocks/photo/__delete-btn/photo__delete-btn.css);
+@import url(./blocks/photo/__delete-btn/_invisible/photo__delete-btn_invisible.css);
+/* end:photo */
+
+/* begin:footer */
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/footer/__copyright/footer__copyright.css);
+/* end:footer */
+
+/* begin:form */
+@import url(./blocks/form/form.css);
+@import url(./blocks/form/__title/form__title.css);
+@import url(./blocks/form/__title/_confirm/form__title_confirm.css);
+@import url(./blocks/form/__input/form__input.css);
+@import url(./blocks/form/__input/_type/form__input_type_error.css);
+@import url(./blocks/form/__button/form__button.css);
+@import url(./blocks/form/__button/_disabled/form__button_disabled.css);
+@import url(./blocks/form/__error/form__error.css);
+@import url(./blocks/form/__error/_visible/form__error_visible.css);
+/* end:form */
+
+/* begin:view-photo*/
+@import url(./blocks/view-photo/view-photo.css);
+@import url(./blocks/view-photo/__img/view-photo__img.css);
+@import url(./blocks/view-photo/__caption/view-photo__caption.css);
+/* end:view-photo*/
