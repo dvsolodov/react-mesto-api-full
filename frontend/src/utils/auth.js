@@ -1,6 +1,6 @@
 class Auth {
   constructor() {
-    this._baseUrl = "https://auth.nomoreparties.co";
+    this._baseUrl = "http://solodov.students.nomoredomains.xyz/";
     this._paramRegister = "/signup";
     this._paramLogin = "/signin";
     this._paramCheckToken = "/users/me/";
@@ -9,8 +9,7 @@ class Auth {
     };
   }
 
-  getUserData(token) {
-    this._headers["Authorization"] = `Bearer ${token}`;
+  getUserData() {
     return fetch(`${this._baseUrl}${this._paramCheckToken}`, {headers: this._headers})
       .then((response) => this._checkResponse(response));
   }

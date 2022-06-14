@@ -1,13 +1,11 @@
 class Api {
   constructor() {
-    this._baseUrl = "https://mesto.nomoreparties.co/v1/cohort-37";
-    this._token = "7f6cc6de-c4ad-423a-8b4b-dcbd983f998a";
+    this._baseUrl = "http://solodov.students.nomoredomains.xyz/";
     this._paramProfile = "/users/me/";
     this._paramAvatar = "/users/me/avatar/";
     this._paramCards = "/cards/";
     this._paramLikes = "/likes/";
     this._headers = {
-      authorization: this._token,
       'Content-Type': 'application/json'
     };
   }
