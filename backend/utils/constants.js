@@ -5,6 +5,7 @@ const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+")
 const allowedCors = [
   'http://solodov.students.nomoredomains.xyz/',
   'https://solodov.students.nomoredomains.xyz/',
+  'http://localhost:3000',
 ];
 
 module.exports = {
