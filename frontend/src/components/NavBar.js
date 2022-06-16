@@ -15,13 +15,13 @@ function NavBar(props) {
       <ul className="navbar__nav">
         <Switch>
           <Route exact path="/">
-            <li><Link to="/sign-out" className="navbar__link navbar__link_log-out" onClick={signOut}>Выйти</Link></li>
+            <li><Link to="/signout" className="navbar__link navbar__link_log-out" onClick={signOut}>Выйти</Link></li>
           </Route>
-          <Route path="/sign-in">
-            <li><Link to="/sign-up" className="navbar__link">Регистрация</Link></li>
+          <Route path="/signin">
+            <li><Link to="/signup" className="navbar__link">Регистрация</Link></li>
           </Route>
-          <Route path="/sign-up">
-            <li><Link to="/sign-in" className="navbar__link">Войти</Link></li>
+          <Route path="/signup">
+            <li><Link to="/signin" className="navbar__link">Войти</Link></li>
           </Route>
         </Switch>
       </ul>

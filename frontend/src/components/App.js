@@ -224,7 +224,7 @@ function App() {
             />
           </Route>
 
-          <Route path="/sign-out">
+          <Route path="/signout">
             <Redirect to="/signin" />
           </Route>
 
