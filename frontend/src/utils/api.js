@@ -1,6 +1,6 @@
 class Api {
   constructor() {
-    this._baseUrl = "https://solodov.students.nomoredomains.xyz/";
+    this._baseUrl = "https://api.solodov.students.nomoredomains.xyz/";
     this._paramProfile = "/users/me/";
     this._paramAvatar = "/users/me/avatar/";
     this._paramCards = "/cards/";
