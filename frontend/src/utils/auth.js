@@ -1,6 +1,6 @@
 class Auth {
   constructor() {
-    this._baseUrl = "https://api.solodov.students.nomoredomains.xyz/";
+    this._baseUrl = "https://api.solodov.students.nomoredomains.xyz";
     this._paramRegister = "/signup";
     this._paramLogin = "/signin";
     this._paramCheckToken = "/users/me/";
