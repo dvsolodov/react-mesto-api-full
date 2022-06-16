@@ -50,7 +50,7 @@ function App() {
       return;
     }
 
-    history.push('/sign-in');
+    history.push('/signin');
   }, [loggedIn, history]);
 
   function handleLogin(email, password) {
@@ -71,7 +71,7 @@ function App() {
   function handleRegister(email, password) {
     return auth.register(email, password)
       .then(() => {
-        history.push('/sign-in');
+        history.push('/signin');
         setIsRegistered(true);
         setIsInfoTooltipOpen(true);
       })
@@ -202,7 +202,7 @@ function App() {
             <AddPlacePopup isOpen={isAddPlacePopupOpen} onClose={closeAllPopups} onAddPlace={handleAddPlaceSubmit} />
           </ProtectedRoute>
 
-          <Route path="/sign-in">
+          <Route path="/signin">
             <div className="auth-form-container">
               <Login handleLogin={handleLogin} />
             </div>
@@ -213,7 +213,7 @@ function App() {
             />
           </Route>
 
-          <Route path="/sign-up">
+          <Route path="/signup">
             <div className="auth-form-container">
               <Register handleRegister={handleRegister} />
             </div>
@@ -225,11 +225,11 @@ function App() {
           </Route>
 
           <Route path="/sign-out">
-            <Redirect to="/sign-in" />
+            <Redirect to="/signin" />
           </Route>
 
           <Route>
-            { loggedIn ? <Redirect to="/" /> : <Redirect to="/sign-in" /> }
+            { loggedIn ? <Redirect to="/" /> : <Redirect to="/signin" /> }
           </Route>
 
         </Switch>
