@@ -68,8 +68,6 @@ class Api {
   }
 
   changeLikeCardStatus(cardId, isLiked) {
-    this._addTokenToHeaders();
-
     if (isLiked) {
       return this._removeLike(cardId);
     } else {
@@ -78,6 +76,8 @@ class Api {
   }
 
   _addLike(cardId) {
+    this._addTokenToHeaders();
+
     return fetch(`${this._baseUrl}${this._paramCards}${cardId}${this._paramLikes}`, {
         method: "PUT",
         headers: this._headers
@@ -86,6 +86,8 @@ class Api {
   }
 
   _removeLike(cardId) {
+    this._addTokenToHeaders();
+
     return fetch(`${this._baseUrl}${this._paramCards}${cardId}${this._paramLikes}`, {
         method: "DELETE",
         headers: this._headers
