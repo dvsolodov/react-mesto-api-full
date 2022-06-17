@@ -56,7 +56,6 @@ function App() {
   function handleLogin(email, password) {
     auth.login(email, password)
       .then((result) => {
-        console.log(result);
         if (!result.token) {
           return;
         }
@@ -93,7 +92,7 @@ function App() {
     if (token !== null) {
       auth.getUserData(token)
         .then((result) => {
-          setEmail(result.data.email);
+          setEmail(result.email);
           setLoggedIn(true);
         })
         .catch(err => console.log(err));
