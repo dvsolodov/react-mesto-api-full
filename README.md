@@ -3,4 +3,4 @@
   
 Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
 
-Ссылка на сайт в Яндекс.Облаке http://solodov.students.nomoredomains.xyz/
+Ссылка на сайт в Яндекс.Облаке https://solodov.students.nomoredomains.xyz/
