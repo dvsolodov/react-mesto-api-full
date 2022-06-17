@@ -10,7 +10,7 @@ const getCards = (req, res, next) => {
         throw new NotFoundError('Нет данных');
       }
 
-      res.send({ cards });
+      res.send(cards);
     })
     .catch(next);
 };
