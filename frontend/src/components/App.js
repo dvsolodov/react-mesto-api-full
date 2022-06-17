@@ -56,6 +56,7 @@ function App() {
   function handleLogin(email, password) {
     auth.login(email, password)
       .then((result) => {
+        console.log(result);
         if (!result.token) {
           return;
         }
