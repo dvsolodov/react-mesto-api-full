@@ -7,7 +7,7 @@ class Api {
     this._paramCards = "/cards/";
     this._paramLikes = "/likes/";
     this._headers = {
-      authorization: this._token,
+      authorization: `Bearer ${this._token}`,
       'Content-Type': 'application/json'
     };
   }
