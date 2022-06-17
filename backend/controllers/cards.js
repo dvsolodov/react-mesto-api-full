@@ -44,7 +44,7 @@ const createCard = (req, res, next) => {
         throw new NotFoundError('Нет данных');
       }
 
-      res.send({ card });
+      res.send(card);
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {
@@ -68,7 +68,7 @@ const likeCard = (req, res, next) => {
         throw new NotFoundError('Нет данных');
       }
 
-      res.send({ card });
+      res.send(card);
     })
     .catch(next);
 };
@@ -86,7 +86,7 @@ const dislikeCard = (req, res, next) => {
         throw new NotFoundError('Нет данных');
       }
 
-      res.send({ card });
+      res.send(card);
     })
     .catch(next);
 };
