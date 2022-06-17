@@ -164,15 +164,10 @@ const login = async (req, res, next) => {
             { expiresIn: 3600 },
           );
 
-          res.cookie('jwt', token, {
-            domain: 'solodov.students.nomoredomains.xyz',
-            sameSite: 'None',
-            secure: true,
-            maxAge: 3600000,
-            httpOnly: true,
-          });
-
-          res.send({ message: 'Успешный вход в систему' })
+          res.send({ 
+            message: 'Успешный вход в систему',
+            token: token,
+           })
             .end();
         });
     })

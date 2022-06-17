@@ -1,11 +1,13 @@
 class Api {
   constructor() {
     this._baseUrl = "https://api.solodov.students.nomoredomains.xyz";
+    this._token = localStorage.getItem('_token');
     this._paramProfile = "/users/me/";
     this._paramAvatar = "/users/me/avatar/";
     this._paramCards = "/cards/";
     this._paramLikes = "/likes/";
     this._headers = {
+      authorization: this._token,
       'Content-Type': 'application/json'
     };
   }

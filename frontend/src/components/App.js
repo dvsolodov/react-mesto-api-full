@@ -55,11 +55,11 @@ function App() {
 
   function handleLogin(email, password) {
     auth.login(email, password)
-      .then((response) => {
-        if (response.status !== 200 || response.status !== 201 ) {
+      .then((result) => {
+        if (!result.token) {
           return;
         }
-
+        localStorage.setItem('_token', result.token);
         setLoggedIn(true)
       })
       .catch(() => {
@@ -82,22 +82,21 @@ function App() {
   }
 
   function handleSignOut() {
+    localStorage.removeItem('_token');
     setLoggedIn(false);
     setEmail('');
   }
 
   function checkToken() {
-    auth.getUserData()
-      .then((user) => {
-        if (user._id !== undefined) {
-          setEmail(user.email);
+    const token = localStorage.getItem('_token');
+    if (token !== null) {
+      auth.getUserData(token)
+        .then((result) => {
+          setEmail(result.data.email);
           setLoggedIn(true);
-        } else {
-          setLoggedIn(false);
-          setEmail('');
-        }
-      })
-      .catch(err => console.log(err));
+        })
+        .catch(err => console.log(err));
+    }
   }
 
   function handleCardLike(card) {
