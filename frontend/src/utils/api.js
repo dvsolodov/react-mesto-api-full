@@ -82,6 +82,7 @@ class Api {
   }
 
   _checkResponse(response) {
+    console.log(response.headers)
     return response.ok ? response.json() : Promise.reject(`Ошибка запроса: ${response.status}`);
   }
 }
