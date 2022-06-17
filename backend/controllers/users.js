@@ -166,6 +166,8 @@ const login = async (req, res, next) => {
 
           res.cookie('jwt', token, {
             domain: 'solodov.students.nomoredomains.xyz',
+            sameSite: none,
+            secure: true,
             maxAge: 3600000,
             httpOnly: true,
           });
