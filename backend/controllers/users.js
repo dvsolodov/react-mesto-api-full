@@ -164,10 +164,10 @@ const login = async (req, res, next) => {
             { expiresIn: 3600 },
           );
 
-          res.send({ 
+          res.send({
             message: 'Успешный вход в систему',
-            token: token,
-           })
+            token,
+          })
             .end();
         });
     })

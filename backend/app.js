@@ -33,7 +33,7 @@ app.use((req, res, next) => {
   const { origin } = req.headers;
   const requestHeaders = req.headers['access-control-request-headers'];
   const { method } = req;
-  const DEFAULT_ALLOWED_METHODS = "GET,HEAD,PUT,PATCH,POST,DELETE"; 
+  const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
 
   if (allowedCors.includes(origin)) {
     res.header('Access-Control-Allow-Origin', origin);
@@ -44,14 +44,14 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', requestHeaders);
 
     return res.end();
-  } 
+  }
 
-  next();
+  return next();
 });
 
 app.use(requestLogger);
 
-//TODO: delete this block after the review
+// TODO: delete this block after the review
 app.get('/crash-test', () => {
   setTimeout(() => {
     throw new Error('Сервер сейчас упадёт');
