@@ -4,3 +4,5 @@
 Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
 
 Ссылка на сайт в Яндекс.Облаке https://solodov.students.nomoredomains.xyz/
+Ссылка на домен сервера https://api.solodov.students.nomoredomains.xyz/
+Публичный IP - 51.250.92.136
